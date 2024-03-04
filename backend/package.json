@@ -1,0 +1,24 @@
+{
+	"name": "cpmoney",
+	"version": "1.0.0",
+	"description": "",
+	"main": "index.js",
+	"scripts": {
+		"start:dev": "tsx watch src/server.ts",
+		"start": "node build/server.js",
+		"build": "tsup src --out-dir build"
+	},
+	"dependencies": {
+		"dotenv": "^16.4.5",
+		"fastify": "^4.26.2",
+		"zod": "^3.22.4"
+	},
+	"devDependencies": {
+		"@cp2ejr/eslint-config": "^1.1.1",
+		"@types/node": "^20.11.24",
+		"eslint": "^8.57.0",
+		"tsup": "^8.0.2",
+		"tsx": "^4.7.1",
+		"typescript": "^5.3.3"
+	}
+}

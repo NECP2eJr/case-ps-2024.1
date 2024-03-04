@@ -1,0 +1,40 @@
+:root {
+  font-family: Amiko, sans-serif;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  --orange-300: #CC8600;
+  --orange-200: #FFA800;
+  --orange-100: #FFB933;
+
+  --green-300: #00CC3A;
+  --green-200: #00FF48;
+  --green-100: #33FF6D;
+
+  --red-200: #AA2834;
+  --red-100: #FE8670;
+
+  --blue-500: #0A141F;
+  --blue-400: #13273D;
+  --blue-300-default: #2B3D50;
+  --blue-300-hover: #405B77;
+  --blue-200: #A1A9B1;
+  --blue-100: #D0D4D8;
+
+  --white: #FFFFFF;
+  --gray: #7C7C8A;
+  --black: #2E2E2E;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+  background-color: var(--blue-400);
+  color: var(--white);
+}
+
