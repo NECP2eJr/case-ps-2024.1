@@ -38,3 +38,7 @@ body {
   color: var(--white);
 }
 
+.teste {
+  color: var(--orange-300);
+}
+
