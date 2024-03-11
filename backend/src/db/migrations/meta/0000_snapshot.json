@@ -1,0 +1,61 @@
+{
+  "id": "30e9c108-c7e2-4e68-92c9-5cb45fcfd7a9",
+  "prevId": "00000000-0000-0000-0000-000000000000",
+  "version": "5",
+  "dialect": "pg",
+  "tables": {
+    "transacoes": {
+      "name": "transacoes",
+      "schema": "",
+      "columns": {
+        "idTransacao": {
+          "name": "idTransacao",
+          "type": "bigserial",
+          "primaryKey": true,
+          "notNull": true
+        },
+        "preco_transacao": {
+          "name": "preco_transacao",
+          "type": "real",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "descricao": {
+          "name": "descricao",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "categoria": {
+          "name": "categoria",
+          "type": "varchar(255)",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "data_transacao": {
+          "name": "data_transacao",
+          "type": "varchar(25)",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "lucro": {
+          "name": "lucro",
+          "type": "boolean",
+          "primaryKey": false,
+          "notNull": true
+        }
+      },
+      "indexes": {},
+      "foreignKeys": {},
+      "compositePrimaryKeys": {},
+      "uniqueConstraints": {}
+    }
+  },
+  "enums": {},
+  "schemas": {},
+  "_meta": {
+    "columns": {},
+    "schemas": {},
+    "tables": {}
+  }
+}

@@ -26,4 +26,10 @@ dist-ssr
 pnpm-lock.yaml
 yarn.lock
 package-lock.json
+backend/.env
+src/.env
+drizzle.config.ts
+.env
+src/utils
+backend/src/env/index.ts
 

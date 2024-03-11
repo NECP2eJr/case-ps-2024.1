@@ -6,17 +6,27 @@
 	"scripts": {
 		"start:dev": "tsx watch src/server.ts",
 		"start": "node build/server.js",
-		"build": "tsup src --out-dir build"
+		"build": "tsup src --out-dir build",
+		"db:generate": "drizzle-kit generate:pg --schema ./src/db/schema.ts --out=./src/db/migrations",
+		"db:migrate": "ts-node ./src/db/migrate.ts",
+		"db:seed": "ts-node ./src/db/seed.ts"
+
 	},
 	"dependencies": {
+		"@neondatabase/serverless": "^0.9.0",
 		"dotenv": "^16.4.5",
+		"drizzle-orm": "^0.30.0",
 		"fastify": "^4.26.2",
+		"pg": "^8.11.3",
+		"postgres": "^3.4.3",
 		"zod": "^3.22.4"
 	},
 	"devDependencies": {
 		"@cp2ejr/eslint-config": "^1.1.1",
-		"@types/node": "^20.11.24",
+		"@types/node": "^20.11.25",
+		"drizzle-kit": "^0.20.14",
 		"eslint": "^8.57.0",
+		"ts-node": "^10.9.2",
 		"tsup": "^8.0.2",
 		"tsx": "^4.7.1",
 		"typescript": "^5.3.3"
