@@ -9,10 +9,11 @@
 		"build": "tsup src --out-dir build",
 		"db:generate": "drizzle-kit generate:pg --schema ./src/db/schema.ts --out=./src/db/migrations",
 		"db:migrate": "ts-node ./src/db/migrate.ts",
-		"db:seed": "ts-node ./src/db/seed.ts"
-
+		"db:seed": "ts-node ./src/db/seed.ts",
+		"db:transacoes": "ts-node ./src/services/transacoes.ts"
 	},
 	"dependencies": {
+		"@fastify/formbody": "^7.4.0",
 		"@neondatabase/serverless": "^0.9.0",
 		"dotenv": "^16.4.5",
 		"drizzle-orm": "^0.30.0",

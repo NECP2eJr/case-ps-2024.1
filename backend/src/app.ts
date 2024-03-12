@@ -1,9 +1,5 @@
 import fastify from 'fastify'
-
+import transacao from './routes/transacaoRouter'
 export const app = fastify()
 
-app.get('/Funcionando',(request,ServerResponse)=>{
-    ServerResponse.send('deu teste')
-    
-    
-})
+app.register(transacao)
