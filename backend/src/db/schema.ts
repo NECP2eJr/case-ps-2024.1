@@ -1,6 +1,5 @@
 import { text, pgTable, bigserial, varchar, real, boolean } from 'drizzle-orm/pg-core';
 
-// schema.ts
 export const transacoes = pgTable('transacoes', {
   idTransacao: bigserial('idTransacao', { mode: 'number' }).primaryKey().notNull(),
   precoTransacao: real('preco_transacao').notNull(),

@@ -22,7 +22,7 @@ export default class TransacaoService {
   static async exibirTransacoes() {
     try {
       const result = await this.db.select().from(transacoes)
-      console.log('resultados ok');
+      return result
     } catch (error) {
       console.error('Eroo na busca:', error);
     }
