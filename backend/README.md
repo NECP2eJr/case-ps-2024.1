@@ -1,4 +1,4 @@
-# Nome do Projeto
+# CpMoney
 
 Projeto feito pelos participantes do Processo Seletivo - 2024.1
 
@@ -6,21 +6,20 @@ Projeto feito pelos participantes do Processo Seletivo - 2024.1
 
 Certifique-se de ter as seguintes ferramentas instaladas:
 
-- [Node.js](https://nodejs.org/) (versão X.X.X ou superior)
-- [npm](https://www.npmjs.com/) (geralmente vem com o Node.js)
+- [Node.js](https://nodejs.org/) 
+- [npm](https://www.npmjs.com/) 
 
 ## Instalação
 
 1. Clone o repositório:
 
    ```bash
-   git clone https://github.com/seu-usuario/projeto.git
+   git clone https://github.com/NECP2eJr/case-ps-2024.1.git
    ```
 
 2. Navegue até o diretório do projeto:
 
-   ```bash
-   cd projeto
+   ```cd backend
    ```
 
 3. Instale as dependências:
@@ -39,6 +38,11 @@ Certifique-se de ter as seguintes ferramentas instaladas:
 
    Lembre-se de nunca incluir o arquivo `.env` no controle de versão.
 
+##
+use o comando 'npm run db:generate' para gerar script do banco de dados no NeonDb, não esqueça de criar as variaveis de ambiente.
+
+posteriormente utilize npm "db:migrate" para inserir o script gerado no banco de dados Neon.
+
 ## Uso
 
 Inicie o servidor localmente:
@@ -48,14 +52,3 @@ npm start:dev
 ```
 
 O servidor estará disponível em [http://localhost:3333](http://localhost:3333).
-
-## Contribuindo
-
-1. Crie uma branch com a sua feature (`git checkout -b feature/MinhaFeature`)
-2. Faça commit das suas alterações (`git commit -am 'Adiciona MinhaFeature'`)
-3. Faça push para a branch (`git push origin feature/MinhaFeature`)
-4. Crie um novo Pull Request
-
-**Notas Adicionais:**
-
-Para esse projeto, será necessário o uso de um ORM para facilitar a comunicação do back end com o banco de dados escolhido, é recomendado usar o Prisma ou Drizzle.
