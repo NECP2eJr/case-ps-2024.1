@@ -12,7 +12,7 @@ class TransacaoController {
         lucro,
         idTransacao,
       });
-      reply.status(201).send(transacao);
+      reply.status(201).send({message:"Cadastrado com sucesso!",transacao});
     } catch (error) {
       reply.status(400).send({ message: error.message });
     }
