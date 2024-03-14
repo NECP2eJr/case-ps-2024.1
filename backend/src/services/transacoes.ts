@@ -13,10 +13,12 @@ export default class TransacaoService {
 
   static async cadastrarTransacao(transacaoData: any) {
     try {
-      await this.db.insert(transacoes).values([transacaoData]);
+      const result = await this.db.insert(transacoes).values([transacaoData]);
       console.log('Inserção bem-sucedida');
+      return transacaoData
+      
     } catch (error) {
-      console.error('Erro na inserção:', error);
+      return error('Erro na inserção:', error);
     }
   }
   static async exibirTransacoes() {
@@ -25,6 +27,19 @@ export default class TransacaoService {
       return result
     } catch (error) {
       console.error('Eroo na busca:', error);
+    }
+  }
+  static async editarTransacoes(transacaoData){
+    try {
+      const { idTransacao, ...atualizacao } = transacaoData;
+      if (!idTransacao) {
+        console.error('ID não especificado para a atualização.');
+        return;
+      }
+      await this.db.update(transacoes).set(atualizacao).where({ idTransacao });
+      console.log('update bem-sucedido');
+    } catch (error) {
+      console.error('Erro no update:', error);
     }
   }  
 }
